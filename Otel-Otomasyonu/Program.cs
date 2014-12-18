@@ -16,7 +16,7 @@ namespace Otel_Otomasyonu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GirisSayfasi());
+            Application.Run(new Anasayfa());
         }
     }
 }

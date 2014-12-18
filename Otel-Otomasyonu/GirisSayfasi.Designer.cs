@@ -36,6 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Temizle = new System.Windows.Forms.Button();
             this.Giris = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // label4
@@ -118,6 +119,10 @@
             this.Giris.UseVisualStyleBackColor = true;
             this.Giris.Click += new System.EventHandler(this.Giris_Click);
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
             // GirisSayfasi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -149,5 +154,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Temizle;
         private System.Windows.Forms.Button Giris;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data.OleDb;
 
 namespace Otel_Otomasyonu
 {
@@ -31,11 +32,11 @@ namespace Otel_Otomasyonu
             DataTable veriler = new DataTable();
             string kullanici_adi = k_adi, kullanici_sifre = sifre;
             BaglantiAc();
-            string asd="select PersonelTCNo from PersonelBilgi where PersonelTCNo like '"+kullanici_adi+"'";
-            SqlCommand kullanici_adi_sorgu = new SqlCommand(asd, baglanti);
+            string GirisKontrol="select PersonelTCNo from PersonelBilgi where PersonelTCNo = '"+kullanici_adi+"'";
+            SqlCommand kullanici_adi_sorgu = new SqlCommand(GirisKontrol, baglanti);
             
 
-            if (kullanici_adi == "")
+            if (kullanici_adi.Length>=11)
             {
                 MessageBox.Show(kullanici_adi_sorgu.ToString());
             }

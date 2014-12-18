@@ -26,7 +26,7 @@ namespace Otel_Otomasyonu
 
         private void KullaniciAdi_TextChanged(object sender, EventArgs e)
         {
-            if (KullaniciAdi.Text.Length<11)
+            if (KullaniciAdi.Text.Length>=11)
             {
                 Sifre.Enabled = true;
                 Giris.Enabled = true;
@@ -42,6 +42,11 @@ namespace Otel_Otomasyonu
         private void Giris_Click(object sender, EventArgs e)
         {
             Ayarlar.KullaniciGiris(KullaniciAdi.Text, Sifre.Text);   
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
         }
     }
 }
