@@ -12,10 +12,9 @@ namespace Otel_Otomasyonu
 {
     public partial class Anasayfa : Form
     {
-        MisafirGiris Mgiris;
+        MisafirKayit Mgiris;
         MisafirKontrol Mkontrol;
-        BosOdalar Bodalar;
-        DoluOdalar Dodalar;
+        Odalar odalar;
         public Anasayfa()
         {
             InitializeComponent();
@@ -25,7 +24,7 @@ namespace Otel_Otomasyonu
         {
             if (Mgiris == null || Mgiris.IsDisposed)
             {
-                Mgiris = new MisafirGiris();
+                Mgiris = new MisafirKayit();
                 Mgiris.MdiParent = this;
                 Mgiris.Show();
             }
@@ -53,32 +52,27 @@ namespace Otel_Otomasyonu
 
         private void boşOdalarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (Bodalar == null || Bodalar.IsDisposed)
-            {
-                Bodalar = new BosOdalar();
-                Bodalar.MdiParent = this;
-                Bodalar.Show();
-            }
-            else
-            {
-                Bodalar.Focus();
-            }
-            Bodalar.WindowState = FormWindowState.Maximized;
+            
         }
 
         private void doluOdalarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (Dodalar == null || Dodalar.IsDisposed)
+            
+        }
+
+        private void odalarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (odalar == null || odalar.IsDisposed)
             {
-                Dodalar = new DoluOdalar();
-                Dodalar.MdiParent = this;
-                Dodalar.Show();
+                odalar = new Odalar();
+                odalar.MdiParent = this;
+                odalar.Show();
             }
             else
             {
-                Dodalar.Focus();
+                odalar.Focus();
             }
-            Dodalar.WindowState = FormWindowState.Maximized;
+            odalar.WindowState = FormWindowState.Maximized;
         }
     }
 }

@@ -30,9 +30,9 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.misafirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.odaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.misafirGirişiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.misafirKontrolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.odaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.odalarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.boşOdalarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doluOdalarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,7 +47,7 @@
             this.odaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(847, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(964, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -59,14 +59,6 @@
             this.misafirToolStripMenuItem.Name = "misafirToolStripMenuItem";
             this.misafirToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.misafirToolStripMenuItem.Text = "Misafir";
-            // 
-            // odaToolStripMenuItem
-            // 
-            this.odaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.odalarToolStripMenuItem});
-            this.odaToolStripMenuItem.Name = "odaToolStripMenuItem";
-            this.odaToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.odaToolStripMenuItem.Text = "Oda";
             // 
             // misafirGirişiToolStripMenuItem
             // 
@@ -82,6 +74,14 @@
             this.misafirKontrolToolStripMenuItem.Text = "Misafir Kontrol";
             this.misafirKontrolToolStripMenuItem.Click += new System.EventHandler(this.misafirKontrolToolStripMenuItem_Click);
             // 
+            // odaToolStripMenuItem
+            // 
+            this.odaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.odalarToolStripMenuItem});
+            this.odaToolStripMenuItem.Name = "odaToolStripMenuItem";
+            this.odaToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.odaToolStripMenuItem.Text = "Oda";
+            // 
             // odalarToolStripMenuItem
             // 
             this.odalarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -90,6 +90,7 @@
             this.odalarToolStripMenuItem.Name = "odalarToolStripMenuItem";
             this.odalarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.odalarToolStripMenuItem.Text = "Odalar";
+            this.odalarToolStripMenuItem.Click += new System.EventHandler(this.odalarToolStripMenuItem_Click);
             // 
             // boşOdalarToolStripMenuItem
             // 
@@ -109,11 +110,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 374);
+            this.ClientSize = new System.Drawing.Size(964, 641);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Anasayfa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Otel Otomasyonu-EMRE KARA";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Otel_Otomasyonu
 {
-    public partial class BosOdalar : Form
+    public partial class Odalar : Form
     {
-        public BosOdalar()
+        public Odalar()
         {
             InitializeComponent();
         }
