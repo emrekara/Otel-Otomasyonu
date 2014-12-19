@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.OdaLimiti = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.OdaNumarasi = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.KisiAdedi = new System.Windows.Forms.ComboBox();
@@ -97,6 +99,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.OdaLimiti);
+            this.groupBox1.Controls.Add(this.label25);
             this.groupBox1.Controls.Add(this.OdaNumarasi);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.KisiAdedi);
@@ -112,6 +116,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Rezervasyon";
             // 
+            // OdaLimiti
+            // 
+            this.OdaLimiti.Location = new System.Drawing.Point(221, 99);
+            this.OdaLimiti.Name = "OdaLimiti";
+            this.OdaLimiti.Size = new System.Drawing.Size(36, 20);
+            this.OdaLimiti.TabIndex = 9;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(162, 101);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(53, 13);
+            this.label25.TabIndex = 8;
+            this.label25.Text = "Oda Limiti";
+            // 
             // OdaNumarasi
             // 
             this.OdaNumarasi.FormattingEnabled = true;
@@ -119,6 +139,8 @@
             this.OdaNumarasi.Name = "OdaNumarasi";
             this.OdaNumarasi.Size = new System.Drawing.Size(47, 21);
             this.OdaNumarasi.TabIndex = 7;
+            this.OdaNumarasi.SelectedIndexChanged += new System.EventHandler(this.OdaNumarasi_SelectedIndexChanged);
+            this.OdaNumarasi.SelectedValueChanged += new System.EventHandler(this.OdaNumarasi_SelectedValueChanged);
             // 
             // label4
             // 
@@ -207,6 +229,7 @@
             this.Kaydet.TabIndex = 1;
             this.Kaydet.Text = "Kaydet";
             this.Kaydet.UseVisualStyleBackColor = true;
+            this.Kaydet.Click += new System.EventHandler(this.Kaydet_Click);
             // 
             // tabControl1
             // 
@@ -263,6 +286,7 @@
             // BirTCNo
             // 
             this.BirTCNo.Location = new System.Drawing.Point(105, 5);
+            this.BirTCNo.MaxLength = 11;
             this.BirTCNo.Name = "BirTCNo";
             this.BirTCNo.Size = new System.Drawing.Size(100, 20);
             this.BirTCNo.TabIndex = 11;
@@ -346,6 +370,7 @@
             // IkiTCNo
             // 
             this.IkiTCNo.Location = new System.Drawing.Point(105, 5);
+            this.IkiTCNo.MaxLength = 11;
             this.IkiTCNo.Name = "IkiTCNo";
             this.IkiTCNo.Size = new System.Drawing.Size(100, 20);
             this.IkiTCNo.TabIndex = 19;
@@ -428,6 +453,7 @@
             // UcTCNo
             // 
             this.UcTCNo.Location = new System.Drawing.Point(105, 5);
+            this.UcTCNo.MaxLength = 11;
             this.UcTCNo.Name = "UcTCNo";
             this.UcTCNo.Size = new System.Drawing.Size(100, 20);
             this.UcTCNo.TabIndex = 27;
@@ -510,6 +536,7 @@
             // DortTCNo
             // 
             this.DortTCNo.Location = new System.Drawing.Point(105, 5);
+            this.DortTCNo.MaxLength = 11;
             this.DortTCNo.Name = "DortTCNo";
             this.DortTCNo.Size = new System.Drawing.Size(100, 20);
             this.DortTCNo.TabIndex = 27;
@@ -592,6 +619,7 @@
             // BesTCNo
             // 
             this.BesTCNo.Location = new System.Drawing.Point(105, 5);
+            this.BesTCNo.MaxLength = 11;
             this.BesTCNo.Name = "BesTCNo";
             this.BesTCNo.Size = new System.Drawing.Size(100, 20);
             this.BesTCNo.TabIndex = 27;
@@ -720,6 +748,8 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox OdaLimiti;
+        private System.Windows.Forms.Label label25;
 
     }
 }
