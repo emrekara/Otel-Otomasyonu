@@ -27,25 +27,6 @@ namespace Otel_Otomasyonu
 
         }
 
-        public static void KullaniciGiris(string k_adi, string sifre)
-        {
-            DataTable veriler = new DataTable();
-            string kullanici_adi = k_adi, kullanici_sifre = sifre;
-            BaglantiAc();
-            string GirisKontrol="select PersonelTCNo from PersonelBilgi where PersonelTCNo = '"+kullanici_adi+"'";
-            SqlCommand kullanici_adi_sorgu = new SqlCommand(GirisKontrol, baglanti);
-            
-
-            if (kullanici_adi.Length>=11)
-            {
-                MessageBox.Show(kullanici_adi_sorgu.ToString());
-            }
-            else
-            {
-                MessageBox.Show("sads");
-            }
-        }
-
         public static void BaglantiKapat()
         {
             baglanti.Close();

@@ -43,7 +43,7 @@
             this.Kaydet = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.BirinciMisafir = new System.Windows.Forms.TabPage();
-            this.BirEmail = new System.Windows.Forms.TextBox();
+            this.BirCinsiyet = new System.Windows.Forms.ComboBox();
             this.BirTelefon = new System.Windows.Forms.TextBox();
             this.BirAdiSoyadi = new System.Windows.Forms.TextBox();
             this.BirTCNo = new System.Windows.Forms.TextBox();
@@ -52,41 +52,52 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.IkinciMisafir = new System.Windows.Forms.TabPage();
-            this.IkiEmail = new System.Windows.Forms.TextBox();
+            this.IkiCinsiyet = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.IkiTelefon = new System.Windows.Forms.TextBox();
             this.IkiAdiSoyadi = new System.Windows.Forms.TextBox();
             this.IkiTCNo = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.UcuncuMisafir = new System.Windows.Forms.TabPage();
-            this.UcEmail = new System.Windows.Forms.TextBox();
+            this.UcCinsiyet = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.UcTelefon = new System.Windows.Forms.TextBox();
             this.UcAdiSoyadi = new System.Windows.Forms.TextBox();
             this.UcTCNo = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.DorduncuMisafir = new System.Windows.Forms.TabPage();
-            this.DortEmail = new System.Windows.Forms.TextBox();
+            this.DortCinsiyet = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.DortTelefon = new System.Windows.Forms.TextBox();
             this.DortAdiSoyadi = new System.Windows.Forms.TextBox();
             this.DortTCNo = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.BesinciMisafir = new System.Windows.Forms.TabPage();
-            this.BesEmail = new System.Windows.Forms.TextBox();
+            this.BesCinsiyet = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.BesTelefon = new System.Windows.Forms.TextBox();
             this.BesAdiSoyadi = new System.Windows.Forms.TextBox();
             this.BesTCNo = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.KayitCikis = new System.Windows.Forms.Button();
+            this.KLTCKimlik = new System.Windows.Forms.TextBox();
+            this.KLAdSoyad = new System.Windows.Forms.TextBox();
+            this.KLTelefon = new System.Windows.Forms.TextBox();
+            this.KLCinsiyet = new System.Windows.Forms.TextBox();
+            this.KayitListesi = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -95,6 +106,8 @@
             this.UcuncuMisafir.SuspendLayout();
             this.DorduncuMisafir.SuspendLayout();
             this.BesinciMisafir.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.KayitListesi)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -138,7 +151,7 @@
             this.OdaNumarasi.Location = new System.Drawing.Point(92, 98);
             this.OdaNumarasi.Name = "OdaNumarasi";
             this.OdaNumarasi.Size = new System.Drawing.Size(47, 21);
-            this.OdaNumarasi.TabIndex = 7;
+            this.OdaNumarasi.TabIndex = 3;
             this.OdaNumarasi.SelectedIndexChanged += new System.EventHandler(this.OdaNumarasi_SelectedIndexChanged);
             this.OdaNumarasi.SelectedValueChanged += new System.EventHandler(this.OdaNumarasi_SelectedValueChanged);
             // 
@@ -163,7 +176,7 @@
             this.KisiAdedi.Location = new System.Drawing.Point(92, 20);
             this.KisiAdedi.Name = "KisiAdedi";
             this.KisiAdedi.Size = new System.Drawing.Size(47, 21);
-            this.KisiAdedi.TabIndex = 5;
+            this.KisiAdedi.TabIndex = 1;
             this.KisiAdedi.SelectedIndexChanged += new System.EventHandler(this.KisiAdedi_SelectedIndexChanged);
             this.KisiAdedi.TextChanged += new System.EventHandler(this.KisiAdedi_TextChanged);
             // 
@@ -199,7 +212,7 @@
             this.CikisTarihi.Location = new System.Drawing.Point(92, 72);
             this.CikisTarihi.Name = "CikisTarihi";
             this.CikisTarihi.Size = new System.Drawing.Size(165, 20);
-            this.CikisTarihi.TabIndex = 1;
+            this.CikisTarihi.TabIndex = 2;
             this.CikisTarihi.ValueChanged += new System.EventHandler(this.CikisTarihi_ValueChanged);
             // 
             // GirisTarihi
@@ -207,7 +220,7 @@
             this.GirisTarihi.Location = new System.Drawing.Point(92, 46);
             this.GirisTarihi.Name = "GirisTarihi";
             this.GirisTarihi.Size = new System.Drawing.Size(165, 20);
-            this.GirisTarihi.TabIndex = 0;
+            this.GirisTarihi.TabIndex = 2;
             this.GirisTarihi.ValueChanged += new System.EventHandler(this.GirisTarihi_ValueChanged);
             // 
             // groupBox2
@@ -216,14 +229,14 @@
             this.groupBox2.Controls.Add(this.tabControl1);
             this.groupBox2.Location = new System.Drawing.Point(309, 13);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(548, 273);
+            this.groupBox2.Size = new System.Drawing.Size(660, 273);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Kişi Bilgisi";
             // 
             // Kaydet
             // 
-            this.Kaydet.Location = new System.Drawing.Point(457, 40);
+            this.Kaydet.Location = new System.Drawing.Point(579, 17);
             this.Kaydet.Name = "Kaydet";
             this.Kaydet.Size = new System.Drawing.Size(75, 23);
             this.Kaydet.TabIndex = 1;
@@ -241,12 +254,12 @@
             this.tabControl1.Location = new System.Drawing.Point(6, 19);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(449, 209);
+            this.tabControl1.Size = new System.Drawing.Size(567, 209);
             this.tabControl1.TabIndex = 0;
             // 
             // BirinciMisafir
             // 
-            this.BirinciMisafir.Controls.Add(this.BirEmail);
+            this.BirinciMisafir.Controls.Add(this.BirCinsiyet);
             this.BirinciMisafir.Controls.Add(this.BirTelefon);
             this.BirinciMisafir.Controls.Add(this.BirAdiSoyadi);
             this.BirinciMisafir.Controls.Add(this.BirTCNo);
@@ -257,17 +270,22 @@
             this.BirinciMisafir.Location = new System.Drawing.Point(4, 22);
             this.BirinciMisafir.Name = "BirinciMisafir";
             this.BirinciMisafir.Padding = new System.Windows.Forms.Padding(3);
-            this.BirinciMisafir.Size = new System.Drawing.Size(441, 183);
+            this.BirinciMisafir.Size = new System.Drawing.Size(559, 183);
             this.BirinciMisafir.TabIndex = 0;
             this.BirinciMisafir.Text = "1. Kişi";
             this.BirinciMisafir.UseVisualStyleBackColor = true;
             // 
-            // BirEmail
+            // BirCinsiyet
             // 
-            this.BirEmail.Location = new System.Drawing.Point(105, 86);
-            this.BirEmail.Name = "BirEmail";
-            this.BirEmail.Size = new System.Drawing.Size(100, 20);
-            this.BirEmail.TabIndex = 14;
+            this.BirCinsiyet.FormattingEnabled = true;
+            this.BirCinsiyet.Items.AddRange(new object[] {
+            "Erkek",
+            "Kadın"});
+            this.BirCinsiyet.Location = new System.Drawing.Point(105, 86);
+            this.BirCinsiyet.Name = "BirCinsiyet";
+            this.BirCinsiyet.Size = new System.Drawing.Size(100, 21);
+            this.BirCinsiyet.TabIndex = 14;
+            this.BirCinsiyet.Text = "Erkek";
             // 
             // BirTelefon
             // 
@@ -297,9 +315,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(3, 89);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 13);
+            this.label5.Size = new System.Drawing.Size(43, 13);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Email Adresi";
+            this.label5.Text = "Cinsiyet";
             // 
             // label6
             // 
@@ -330,14 +348,14 @@
             // 
             // IkinciMisafir
             // 
-            this.IkinciMisafir.Controls.Add(this.IkiEmail);
+            this.IkinciMisafir.Controls.Add(this.IkiCinsiyet);
+            this.IkinciMisafir.Controls.Add(this.label9);
+            this.IkinciMisafir.Controls.Add(this.label12);
             this.IkinciMisafir.Controls.Add(this.IkiTelefon);
             this.IkinciMisafir.Controls.Add(this.IkiAdiSoyadi);
             this.IkinciMisafir.Controls.Add(this.IkiTCNo);
-            this.IkinciMisafir.Controls.Add(this.label9);
             this.IkinciMisafir.Controls.Add(this.label10);
             this.IkinciMisafir.Controls.Add(this.label11);
-            this.IkinciMisafir.Controls.Add(this.label12);
             this.IkinciMisafir.Location = new System.Drawing.Point(4, 22);
             this.IkinciMisafir.Name = "IkinciMisafir";
             this.IkinciMisafir.Padding = new System.Windows.Forms.Padding(3);
@@ -346,12 +364,35 @@
             this.IkinciMisafir.Text = "2. Kişi";
             this.IkinciMisafir.UseVisualStyleBackColor = true;
             // 
-            // IkiEmail
+            // IkiCinsiyet
             // 
-            this.IkiEmail.Location = new System.Drawing.Point(105, 87);
-            this.IkiEmail.Name = "IkiEmail";
-            this.IkiEmail.Size = new System.Drawing.Size(100, 20);
-            this.IkiEmail.TabIndex = 22;
+            this.IkiCinsiyet.FormattingEnabled = true;
+            this.IkiCinsiyet.Items.AddRange(new object[] {
+            "Erkek",
+            "Kadın"});
+            this.IkiCinsiyet.Location = new System.Drawing.Point(105, 88);
+            this.IkiCinsiyet.Name = "IkiCinsiyet";
+            this.IkiCinsiyet.Size = new System.Drawing.Size(100, 21);
+            this.IkiCinsiyet.TabIndex = 25;
+            this.IkiCinsiyet.Text = "Erkek";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 88);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(43, 13);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Cinsiyet";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 35);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(60, 13);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "Adı Soyadı:";
             // 
             // IkiTelefon
             // 
@@ -376,15 +417,6 @@
             this.IkiTCNo.TabIndex = 19;
             this.IkiTCNo.TextChanged += new System.EventHandler(this.IkiTCNo_TextChanged);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 90);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 13);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Email Adresi";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -403,25 +435,16 @@
             this.label11.TabIndex = 16;
             this.label11.Text = "Telefon Numarası:";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 36);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 13);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "Adı Soyadı:";
-            // 
             // UcuncuMisafir
             // 
-            this.UcuncuMisafir.Controls.Add(this.UcEmail);
+            this.UcuncuMisafir.Controls.Add(this.UcCinsiyet);
+            this.UcuncuMisafir.Controls.Add(this.label13);
+            this.UcuncuMisafir.Controls.Add(this.label16);
             this.UcuncuMisafir.Controls.Add(this.UcTelefon);
             this.UcuncuMisafir.Controls.Add(this.UcAdiSoyadi);
             this.UcuncuMisafir.Controls.Add(this.UcTCNo);
-            this.UcuncuMisafir.Controls.Add(this.label13);
             this.UcuncuMisafir.Controls.Add(this.label14);
             this.UcuncuMisafir.Controls.Add(this.label15);
-            this.UcuncuMisafir.Controls.Add(this.label16);
             this.UcuncuMisafir.Location = new System.Drawing.Point(4, 22);
             this.UcuncuMisafir.Name = "UcuncuMisafir";
             this.UcuncuMisafir.Size = new System.Drawing.Size(441, 183);
@@ -429,12 +452,35 @@
             this.UcuncuMisafir.Text = "3. Kişi";
             this.UcuncuMisafir.UseVisualStyleBackColor = true;
             // 
-            // UcEmail
+            // UcCinsiyet
             // 
-            this.UcEmail.Location = new System.Drawing.Point(105, 87);
-            this.UcEmail.Name = "UcEmail";
-            this.UcEmail.Size = new System.Drawing.Size(100, 20);
-            this.UcEmail.TabIndex = 30;
+            this.UcCinsiyet.FormattingEnabled = true;
+            this.UcCinsiyet.Items.AddRange(new object[] {
+            "Erkek",
+            "Kadın"});
+            this.UcCinsiyet.Location = new System.Drawing.Point(105, 85);
+            this.UcCinsiyet.Name = "UcCinsiyet";
+            this.UcCinsiyet.Size = new System.Drawing.Size(100, 21);
+            this.UcCinsiyet.TabIndex = 33;
+            this.UcCinsiyet.Text = "Erkek";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(3, 88);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(43, 13);
+            this.label13.TabIndex = 32;
+            this.label13.Text = "Cinsiyet";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(3, 35);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(60, 13);
+            this.label16.TabIndex = 31;
+            this.label16.Text = "Adı Soyadı:";
             // 
             // UcTelefon
             // 
@@ -459,15 +505,6 @@
             this.UcTCNo.TabIndex = 27;
             this.UcTCNo.TextChanged += new System.EventHandler(this.UcTCNo_TextChanged);
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 90);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(64, 13);
-            this.label13.TabIndex = 26;
-            this.label13.Text = "Email Adresi";
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -486,22 +523,13 @@
             this.label15.TabIndex = 24;
             this.label15.Text = "Telefon Numarası:";
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(3, 36);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(60, 13);
-            this.label16.TabIndex = 23;
-            this.label16.Text = "Adı Soyadı:";
-            // 
             // DorduncuMisafir
             // 
-            this.DorduncuMisafir.Controls.Add(this.DortEmail);
+            this.DorduncuMisafir.Controls.Add(this.DortCinsiyet);
+            this.DorduncuMisafir.Controls.Add(this.label17);
             this.DorduncuMisafir.Controls.Add(this.DortTelefon);
             this.DorduncuMisafir.Controls.Add(this.DortAdiSoyadi);
             this.DorduncuMisafir.Controls.Add(this.DortTCNo);
-            this.DorduncuMisafir.Controls.Add(this.label17);
             this.DorduncuMisafir.Controls.Add(this.label18);
             this.DorduncuMisafir.Controls.Add(this.label19);
             this.DorduncuMisafir.Controls.Add(this.label20);
@@ -512,12 +540,26 @@
             this.DorduncuMisafir.Text = "4. Kişi";
             this.DorduncuMisafir.UseVisualStyleBackColor = true;
             // 
-            // DortEmail
+            // DortCinsiyet
             // 
-            this.DortEmail.Location = new System.Drawing.Point(105, 87);
-            this.DortEmail.Name = "DortEmail";
-            this.DortEmail.Size = new System.Drawing.Size(100, 20);
-            this.DortEmail.TabIndex = 30;
+            this.DortCinsiyet.FormattingEnabled = true;
+            this.DortCinsiyet.Items.AddRange(new object[] {
+            "Erkek",
+            "Kadın"});
+            this.DortCinsiyet.Location = new System.Drawing.Point(105, 87);
+            this.DortCinsiyet.Name = "DortCinsiyet";
+            this.DortCinsiyet.Size = new System.Drawing.Size(100, 21);
+            this.DortCinsiyet.TabIndex = 33;
+            this.DortCinsiyet.Text = "Erkek";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(3, 90);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(43, 13);
+            this.label17.TabIndex = 32;
+            this.label17.Text = "Cinsiyet";
             // 
             // DortTelefon
             // 
@@ -541,15 +583,6 @@
             this.DortTCNo.Size = new System.Drawing.Size(100, 20);
             this.DortTCNo.TabIndex = 27;
             this.DortTCNo.TextChanged += new System.EventHandler(this.DortTCNo_TextChanged);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(3, 90);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(64, 13);
-            this.label17.TabIndex = 26;
-            this.label17.Text = "Email Adresi";
             // 
             // label18
             // 
@@ -580,11 +613,11 @@
             // 
             // BesinciMisafir
             // 
-            this.BesinciMisafir.Controls.Add(this.BesEmail);
+            this.BesinciMisafir.Controls.Add(this.BesCinsiyet);
+            this.BesinciMisafir.Controls.Add(this.label21);
             this.BesinciMisafir.Controls.Add(this.BesTelefon);
             this.BesinciMisafir.Controls.Add(this.BesAdiSoyadi);
             this.BesinciMisafir.Controls.Add(this.BesTCNo);
-            this.BesinciMisafir.Controls.Add(this.label21);
             this.BesinciMisafir.Controls.Add(this.label22);
             this.BesinciMisafir.Controls.Add(this.label23);
             this.BesinciMisafir.Controls.Add(this.label24);
@@ -595,12 +628,26 @@
             this.BesinciMisafir.Text = "5. Kişi";
             this.BesinciMisafir.UseVisualStyleBackColor = true;
             // 
-            // BesEmail
+            // BesCinsiyet
             // 
-            this.BesEmail.Location = new System.Drawing.Point(105, 87);
-            this.BesEmail.Name = "BesEmail";
-            this.BesEmail.Size = new System.Drawing.Size(100, 20);
-            this.BesEmail.TabIndex = 30;
+            this.BesCinsiyet.FormattingEnabled = true;
+            this.BesCinsiyet.Items.AddRange(new object[] {
+            "Erkek",
+            "Kadın"});
+            this.BesCinsiyet.Location = new System.Drawing.Point(105, 87);
+            this.BesCinsiyet.Name = "BesCinsiyet";
+            this.BesCinsiyet.Size = new System.Drawing.Size(100, 21);
+            this.BesCinsiyet.TabIndex = 34;
+            this.BesCinsiyet.Text = "Erkek";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(3, 90);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(43, 13);
+            this.label21.TabIndex = 33;
+            this.label21.Text = "Cinsiyet";
             // 
             // BesTelefon
             // 
@@ -624,15 +671,6 @@
             this.BesTCNo.Size = new System.Drawing.Size(100, 20);
             this.BesTCNo.TabIndex = 27;
             this.BesTCNo.TextChanged += new System.EventHandler(this.BesTCNo_TextChanged);
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(3, 90);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(64, 13);
-            this.label21.TabIndex = 26;
-            this.label21.Text = "Email Adresi";
             // 
             // label22
             // 
@@ -661,11 +699,117 @@
             this.label24.TabIndex = 23;
             this.label24.Text = "Adı Soyadı:";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.KayitListesi);
+            this.groupBox3.Controls.Add(this.KLCinsiyet);
+            this.groupBox3.Controls.Add(this.KLTelefon);
+            this.groupBox3.Controls.Add(this.KLAdSoyad);
+            this.groupBox3.Controls.Add(this.KLTCKimlik);
+            this.groupBox3.Controls.Add(this.label29);
+            this.groupBox3.Controls.Add(this.label28);
+            this.groupBox3.Controls.Add(this.label27);
+            this.groupBox3.Controls.Add(this.label26);
+            this.groupBox3.Controls.Add(this.KayitCikis);
+            this.groupBox3.Location = new System.Drawing.Point(12, 286);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(957, 180);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "KayıtListesi";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(9, 93);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(43, 13);
+            this.label29.TabIndex = 6;
+            this.label29.Text = "Cinsiyet";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(9, 69);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(90, 13);
+            this.label28.TabIndex = 5;
+            this.label28.Text = "Telefon Numarası";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(9, 44);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(57, 13);
+            this.label27.TabIndex = 4;
+            this.label27.Text = "Adı Soyadı";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(9, 19);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(68, 13);
+            this.label26.TabIndex = 3;
+            this.label26.Text = "TC Kimlik No";
+            // 
+            // KayitCikis
+            // 
+            this.KayitCikis.Location = new System.Drawing.Point(141, 151);
+            this.KayitCikis.Name = "KayitCikis";
+            this.KayitCikis.Size = new System.Drawing.Size(150, 23);
+            this.KayitCikis.TabIndex = 1;
+            this.KayitCikis.Text = "Kayıt Çıkış Yap";
+            this.KayitCikis.UseVisualStyleBackColor = true;
+            this.KayitCikis.Click += new System.EventHandler(this.KayitCikis_Click);
+            // 
+            // KLTCKimlik
+            // 
+            this.KLTCKimlik.Location = new System.Drawing.Point(141, 16);
+            this.KLTCKimlik.Name = "KLTCKimlik";
+            this.KLTCKimlik.Size = new System.Drawing.Size(149, 20);
+            this.KLTCKimlik.TabIndex = 7;
+            this.KLTCKimlik.TextChanged += new System.EventHandler(this.KLTCKimlik_TextChanged);
+            // 
+            // KLAdSoyad
+            // 
+            this.KLAdSoyad.Location = new System.Drawing.Point(141, 41);
+            this.KLAdSoyad.Name = "KLAdSoyad";
+            this.KLAdSoyad.Size = new System.Drawing.Size(149, 20);
+            this.KLAdSoyad.TabIndex = 8;
+            this.KLAdSoyad.TextChanged += new System.EventHandler(this.KLAdSoyad_TextChanged);
+            // 
+            // KLTelefon
+            // 
+            this.KLTelefon.Location = new System.Drawing.Point(141, 66);
+            this.KLTelefon.Name = "KLTelefon";
+            this.KLTelefon.Size = new System.Drawing.Size(149, 20);
+            this.KLTelefon.TabIndex = 9;
+            this.KLTelefon.TextChanged += new System.EventHandler(this.KLTelefon_TextChanged);
+            // 
+            // KLCinsiyet
+            // 
+            this.KLCinsiyet.Location = new System.Drawing.Point(141, 89);
+            this.KLCinsiyet.Name = "KLCinsiyet";
+            this.KLCinsiyet.Size = new System.Drawing.Size(149, 20);
+            this.KLCinsiyet.TabIndex = 10;
+            this.KLCinsiyet.TextChanged += new System.EventHandler(this.KLCinsiyet_TextChanged);
+            // 
+            // KayitListesi
+            // 
+            this.KayitListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.KayitListesi.Location = new System.Drawing.Point(296, 16);
+            this.KayitListesi.Name = "KayitListesi";
+            this.KayitListesi.Size = new System.Drawing.Size(655, 158);
+            this.KayitListesi.TabIndex = 11;
+            // 
             // MisafirKayit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(878, 298);
+            this.ClientSize = new System.Drawing.Size(981, 478);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "MisafirKayit";
@@ -685,6 +829,9 @@
             this.DorduncuMisafir.PerformLayout();
             this.BesinciMisafir.ResumeLayout(false);
             this.BesinciMisafir.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.KayitListesi)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -704,7 +851,6 @@
         private System.Windows.Forms.Button Kaydet;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage BirinciMisafir;
-        private System.Windows.Forms.TextBox BirEmail;
         private System.Windows.Forms.TextBox BirTelefon;
         private System.Windows.Forms.TextBox BirAdiSoyadi;
         private System.Windows.Forms.TextBox BirTCNo;
@@ -713,43 +859,55 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TabPage IkinciMisafir;
-        private System.Windows.Forms.TextBox IkiEmail;
         private System.Windows.Forms.TextBox IkiTelefon;
         private System.Windows.Forms.TextBox IkiAdiSoyadi;
         private System.Windows.Forms.TextBox IkiTCNo;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TabPage UcuncuMisafir;
-        private System.Windows.Forms.TextBox UcEmail;
         private System.Windows.Forms.TextBox UcTelefon;
         private System.Windows.Forms.TextBox UcAdiSoyadi;
         private System.Windows.Forms.TextBox UcTCNo;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TabPage DorduncuMisafir;
-        private System.Windows.Forms.TextBox DortEmail;
         private System.Windows.Forms.TextBox DortTelefon;
         private System.Windows.Forms.TextBox DortAdiSoyadi;
         private System.Windows.Forms.TextBox DortTCNo;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TabPage BesinciMisafir;
-        private System.Windows.Forms.TextBox BesEmail;
         private System.Windows.Forms.TextBox BesTelefon;
         private System.Windows.Forms.TextBox BesAdiSoyadi;
         private System.Windows.Forms.TextBox BesTCNo;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox OdaLimiti;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ComboBox BirCinsiyet;
+        private System.Windows.Forms.ComboBox IkiCinsiyet;
+        private System.Windows.Forms.ComboBox UcCinsiyet;
+        private System.Windows.Forms.ComboBox DortCinsiyet;
+        private System.Windows.Forms.ComboBox BesCinsiyet;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button KayitCikis;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox KLCinsiyet;
+        private System.Windows.Forms.TextBox KLTelefon;
+        private System.Windows.Forms.TextBox KLAdSoyad;
+        private System.Windows.Forms.TextBox KLTCKimlik;
+        private System.Windows.Forms.DataGridView KayitListesi;
 
     }
 }

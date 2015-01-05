@@ -31,11 +31,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.misafirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.misafirGirişiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.misafirKontrolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.odaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.odalarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.boşOdalarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.doluOdalarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,8 +51,7 @@
             // misafirToolStripMenuItem
             // 
             this.misafirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.misafirGirişiToolStripMenuItem,
-            this.misafirKontrolToolStripMenuItem});
+            this.misafirGirişiToolStripMenuItem});
             this.misafirToolStripMenuItem.Name = "misafirToolStripMenuItem";
             this.misafirToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.misafirToolStripMenuItem.Text = "Misafir";
@@ -67,13 +63,6 @@
             this.misafirGirişiToolStripMenuItem.Text = "Misafir Girişi";
             this.misafirGirişiToolStripMenuItem.Click += new System.EventHandler(this.misafirGirişiToolStripMenuItem_Click);
             // 
-            // misafirKontrolToolStripMenuItem
-            // 
-            this.misafirKontrolToolStripMenuItem.Name = "misafirKontrolToolStripMenuItem";
-            this.misafirKontrolToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.misafirKontrolToolStripMenuItem.Text = "Misafir Kontrol";
-            this.misafirKontrolToolStripMenuItem.Click += new System.EventHandler(this.misafirKontrolToolStripMenuItem_Click);
-            // 
             // odaToolStripMenuItem
             // 
             this.odaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -84,27 +73,10 @@
             // 
             // odalarToolStripMenuItem
             // 
-            this.odalarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.boşOdalarToolStripMenuItem,
-            this.doluOdalarToolStripMenuItem});
             this.odalarToolStripMenuItem.Name = "odalarToolStripMenuItem";
             this.odalarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.odalarToolStripMenuItem.Text = "Odalar";
             this.odalarToolStripMenuItem.Click += new System.EventHandler(this.odalarToolStripMenuItem_Click);
-            // 
-            // boşOdalarToolStripMenuItem
-            // 
-            this.boşOdalarToolStripMenuItem.Name = "boşOdalarToolStripMenuItem";
-            this.boşOdalarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.boşOdalarToolStripMenuItem.Text = "Boş Odalar";
-            this.boşOdalarToolStripMenuItem.Click += new System.EventHandler(this.boşOdalarToolStripMenuItem_Click);
-            // 
-            // doluOdalarToolStripMenuItem
-            // 
-            this.doluOdalarToolStripMenuItem.Name = "doluOdalarToolStripMenuItem";
-            this.doluOdalarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.doluOdalarToolStripMenuItem.Text = "Dolu Odalar";
-            this.doluOdalarToolStripMenuItem.Click += new System.EventHandler(this.doluOdalarToolStripMenuItem_Click);
             // 
             // Anasayfa
             // 
@@ -128,10 +100,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem misafirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem misafirGirişiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem misafirKontrolToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem odaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem odalarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem boşOdalarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem doluOdalarToolStripMenuItem;
     }
 }
