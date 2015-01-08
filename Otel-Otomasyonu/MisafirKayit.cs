@@ -1080,5 +1080,66 @@ namespace Otel_Otomasyonu
                 }
             }
         }
+
+        private void BosOdalarListele_Click(object sender, EventArgs e)
+        {
+            
+                MessageBox.Show("HOCAM SORGUSUNU ÇÖZEMEDİM ÇOKTA FAZLA :D\n GEREKTE YOK SANIRIM FAZLA\n DOLU ODALAR LİSTELENSİN YETER\n BOŞ ODALAR ZATEN ÜSTTEKİ TARİHLER SEÇİLİNCE\n GELİYOR SAYGILARIMLA ARZ EDERİM :D");
+            
+        }
+
+        private void DoluOdalarListele_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Ayarlar.BaglantiAc();
+                DataTable tablo = new DataTable();
+                tablo.Clear();
+                SqlCommand komut = new SqlCommand("select HO.ID,MK.TCKimlik,MK.Telefon,MK.AdSoyad,MK.Telefon,MK.Cinsiyet,HO.GirisTarihi,HO.CikisTarihi,HO.Durum from (select ID,TCKimlik,Telefon,AdSoyad,Cinsiyet from MisafirKayit) as MK inner join HangiOdada HO on (MK.ID=HO.MusteriID) where HO.Durum like '%Giriş%'", Ayarlar.baglanti);
+                SqlDataAdapter veriler = new SqlDataAdapter(komut);
+                veriler.Fill(tablo);
+                KayitListesi.DataSource = tablo;
+                this.KayitListesi.Columns[0].Width = 40;
+                this.KayitListesi.Columns[1].Width = 80;
+                this.KayitListesi.Columns[2].Width = 120;
+                this.KayitListesi.Columns[3].Width = 90;
+                this.KayitListesi.Columns[4].Width = 60;
+                this.KayitListesi.Columns[5].Width = 75;
+                this.KayitListesi.Columns[6].Width = 75;
+                this.KayitListesi.Columns[7].Width = 54;
+                Ayarlar.BaglantiKapat();
+            }
+            catch (SqlException hata)
+            {
+                MessageBox.Show(hata.Message);
+            }
+        }
+
+        private void BugunCikis_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Ayarlar.BaglantiAc();
+                DataTable tablo = new DataTable();
+                tablo.Clear();
+                SqlCommand komut = new SqlCommand("select HO.ID,MK.TCKimlik,MK.Telefon,MK.AdSoyad,MK.Cinsiyet,HO.GirisTarihi,HO.CikisTarihi,HO.Durum from (select ID,TCKimlik,Telefon,AdSoyad,Cinsiyet from MisafirKayit) as MK inner join HangiOdada HO on (MK.ID=HO.MusteriID) where HO.Durum like '%Giriş%' and (HO.CikisTarihi like CONVERT(VARCHAR(10), GETDATE(), 102))", Ayarlar.baglanti);
+                SqlDataAdapter veriler = new SqlDataAdapter(komut);
+                veriler.Fill(tablo);
+                KayitListesi.DataSource = tablo;
+                this.KayitListesi.Columns[0].Width = 40;
+                this.KayitListesi.Columns[1].Width = 80;
+                this.KayitListesi.Columns[2].Width = 120;
+                this.KayitListesi.Columns[3].Width = 90;
+                this.KayitListesi.Columns[4].Width = 60;
+                this.KayitListesi.Columns[5].Width = 75;
+                this.KayitListesi.Columns[6].Width = 75;
+                this.KayitListesi.Columns[7].Width = 54;
+                Ayarlar.BaglantiKapat();
+            }
+            catch (SqlException hata)
+            {
+                MessageBox.Show(hata.Message);
+            }
+        }
     }
 }
