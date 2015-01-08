@@ -88,6 +88,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.BugunCikis = new System.Windows.Forms.Button();
             this.DoluOdalarListele = new System.Windows.Forms.Button();
             this.BosOdalarListele = new System.Windows.Forms.Button();
             this.KayitListesi = new System.Windows.Forms.DataGridView();
@@ -97,10 +98,10 @@
             this.KLTCKimlik = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
+            this.KayitCikis = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.KayitCikis = new System.Windows.Forms.Button();
-            this.BugunCikis = new System.Windows.Forms.Button();
+            this.TumKayitlar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -704,6 +705,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.TumKayitlar);
             this.groupBox3.Controls.Add(this.BugunCikis);
             this.groupBox3.Controls.Add(this.DoluOdalarListele);
             this.groupBox3.Controls.Add(this.BosOdalarListele);
@@ -719,10 +721,20 @@
             this.groupBox3.Controls.Add(this.label26);
             this.groupBox3.Location = new System.Drawing.Point(12, 286);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(957, 180);
+            this.groupBox3.Size = new System.Drawing.Size(957, 197);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "KayıtListesi";
+            // 
+            // BugunCikis
+            // 
+            this.BugunCikis.Location = new System.Drawing.Point(63, 174);
+            this.BugunCikis.Name = "BugunCikis";
+            this.BugunCikis.Size = new System.Drawing.Size(150, 23);
+            this.BugunCikis.TabIndex = 14;
+            this.BugunCikis.Text = "Bugun Çıkış Yapacaklar";
+            this.BugunCikis.UseVisualStyleBackColor = true;
+            this.BugunCikis.Click += new System.EventHandler(this.BugunCikis_Click);
             // 
             // DoluOdalarListele
             // 
@@ -749,6 +761,7 @@
             this.KayitListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.KayitListesi.Location = new System.Drawing.Point(296, 16);
             this.KayitListesi.Name = "KayitListesi";
+            this.KayitListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.KayitListesi.Size = new System.Drawing.Size(655, 158);
             this.KayitListesi.TabIndex = 11;
             // 
@@ -802,6 +815,16 @@
             this.label28.TabIndex = 5;
             this.label28.Text = "Telefon Numarası";
             // 
+            // KayitCikis
+            // 
+            this.KayitCikis.Location = new System.Drawing.Point(141, 148);
+            this.KayitCikis.Name = "KayitCikis";
+            this.KayitCikis.Size = new System.Drawing.Size(150, 23);
+            this.KayitCikis.TabIndex = 1;
+            this.KayitCikis.Text = "Kayıt Çıkış Yap";
+            this.KayitCikis.UseVisualStyleBackColor = true;
+            this.KayitCikis.Click += new System.EventHandler(this.KayitCikis_Click);
+            // 
             // label27
             // 
             this.label27.AutoSize = true;
@@ -820,31 +843,21 @@
             this.label26.TabIndex = 3;
             this.label26.Text = "TC Kimlik No";
             // 
-            // KayitCikis
+            // TumKayitlar
             // 
-            this.KayitCikis.Location = new System.Drawing.Point(141, 119);
-            this.KayitCikis.Name = "KayitCikis";
-            this.KayitCikis.Size = new System.Drawing.Size(150, 23);
-            this.KayitCikis.TabIndex = 1;
-            this.KayitCikis.Text = "Kayıt Çıkış Yap";
-            this.KayitCikis.UseVisualStyleBackColor = true;
-            this.KayitCikis.Click += new System.EventHandler(this.KayitCikis_Click);
-            // 
-            // BugunCikis
-            // 
-            this.BugunCikis.Location = new System.Drawing.Point(140, 148);
-            this.BugunCikis.Name = "BugunCikis";
-            this.BugunCikis.Size = new System.Drawing.Size(150, 23);
-            this.BugunCikis.TabIndex = 14;
-            this.BugunCikis.Text = "Bugun Çıkış Yapacaklar";
-            this.BugunCikis.UseVisualStyleBackColor = true;
-            this.BugunCikis.Click += new System.EventHandler(this.BugunCikis_Click);
+            this.TumKayitlar.Location = new System.Drawing.Point(141, 119);
+            this.TumKayitlar.Name = "TumKayitlar";
+            this.TumKayitlar.Size = new System.Drawing.Size(149, 23);
+            this.TumKayitlar.TabIndex = 15;
+            this.TumKayitlar.Text = "Tüm Kayıtlar";
+            this.TumKayitlar.UseVisualStyleBackColor = true;
+            this.TumKayitlar.Click += new System.EventHandler(this.TumKayitlar_Click);
             // 
             // MisafirKayit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 478);
+            this.ClientSize = new System.Drawing.Size(981, 495);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -947,6 +960,7 @@
         private System.Windows.Forms.Button DoluOdalarListele;
         private System.Windows.Forms.Button BosOdalarListele;
         private System.Windows.Forms.Button BugunCikis;
+        private System.Windows.Forms.Button TumKayitlar;
 
     }
 }

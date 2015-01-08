@@ -939,6 +939,7 @@ namespace Otel_Otomasyonu
         }
         private void KayitCikis_Click(object sender, EventArgs e)
         {
+
             if (KayitListesi.SelectedRows.Count > 0)
             {
                 DialogResult kontrol;
@@ -953,6 +954,10 @@ namespace Otel_Otomasyonu
                     Ayarlar.BaglantiKapat();
                     KayitListesiDoldur();
                     MessageBox.Show("Çıkış Yapıldı!");
+                    KLTCKimlik.Enabled = true;
+                    KLAdSoyad.Enabled = true;
+                    KLTelefon.Enabled = true;
+                    KLCinsiyet.Enabled = true;
                 }
                 else
                 {
@@ -1083,13 +1088,39 @@ namespace Otel_Otomasyonu
 
         private void BosOdalarListele_Click(object sender, EventArgs e)
         {
-            
-                MessageBox.Show("HOCAM SORGUSUNU ÇÖZEMEDİM ÇOKTA FAZLA :D\n GEREKTE YOK SANIRIM FAZLA\n DOLU ODALAR LİSTELENSİN YETER\n BOŞ ODALAR ZATEN ÜSTTEKİ TARİHLER SEÇİLİNCE\n GELİYOR SAYGILARIMLA ARZ EDERİM :D");
-            
+            KLTCKimlik.Enabled = false;
+            KLAdSoyad.Enabled = false;
+            KLTelefon.Enabled = false;
+            KLCinsiyet.Enabled = false;
+            try
+            {
+                Ayarlar.BaglantiAc();
+                DataTable tablo = new DataTable();
+                tablo.Clear();
+                SqlCommand komut = new SqlCommand("SELECT Odalar.ID, Odalar.Isim, Odalar.Limit from HangiOdada right JOIN Odalar ON HangiOdada.OdaID = Odalar.ID where OdaID is null", Ayarlar.baglanti);
+                SqlDataAdapter veriler = new SqlDataAdapter(komut);
+                veriler.Fill(tablo);
+                KayitListesi.DataSource = tablo;
+                this.KayitListesi.Columns[0].Width = 40;
+                this.KayitListesi.Columns[1].Width = 80;
+                this.KayitListesi.Columns[2].Width = 120;
+                Ayarlar.BaglantiKapat();
+            }
+            catch (SqlException hata)
+            {
+                MessageBox.Show(hata.Message);
+            }
+                
+
         }
 
         private void DoluOdalarListele_Click(object sender, EventArgs e)
         {
+
+            KLTCKimlik.Enabled = false;
+            KLAdSoyad.Enabled = false;
+            KLTelefon.Enabled = false;
+            KLCinsiyet.Enabled = false;
             try
             {
                 Ayarlar.BaglantiAc();
@@ -1117,6 +1148,11 @@ namespace Otel_Otomasyonu
 
         private void BugunCikis_Click(object sender, EventArgs e)
         {
+
+            KLTCKimlik.Enabled = false;
+            KLAdSoyad.Enabled = false;
+            KLTelefon.Enabled = false;
+            KLCinsiyet.Enabled = false;
             try
             {
                 Ayarlar.BaglantiAc();
@@ -1140,6 +1176,15 @@ namespace Otel_Otomasyonu
             {
                 MessageBox.Show(hata.Message);
             }
+        }
+
+        private void TumKayitlar_Click(object sender, EventArgs e)
+        {
+            KayitListesiDoldur();
+            KLTCKimlik.Enabled = true;
+            KLAdSoyad.Enabled = true;
+            KLCinsiyet.Enabled = true;
+            KLTelefon.Enabled = true;
         }
     }
 }
