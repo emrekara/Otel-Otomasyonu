@@ -31,8 +31,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.misafirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.misafirGirişiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.odaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.odalarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,8 +38,7 @@
             // 
             this.menuStrip1.AutoSize = false;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.misafirToolStripMenuItem,
-            this.odaToolStripMenuItem});
+            this.misafirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(964, 24);
@@ -59,24 +56,9 @@
             // misafirGirişiToolStripMenuItem
             // 
             this.misafirGirişiToolStripMenuItem.Name = "misafirGirişiToolStripMenuItem";
-            this.misafirGirişiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.misafirGirişiToolStripMenuItem.Text = "Misafir Girişi";
+            this.misafirGirişiToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.misafirGirişiToolStripMenuItem.Text = "Misafir Girişi - Çıkış - Kontrol";
             this.misafirGirişiToolStripMenuItem.Click += new System.EventHandler(this.misafirGirişiToolStripMenuItem_Click);
-            // 
-            // odaToolStripMenuItem
-            // 
-            this.odaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.odalarToolStripMenuItem});
-            this.odaToolStripMenuItem.Name = "odaToolStripMenuItem";
-            this.odaToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.odaToolStripMenuItem.Text = "Oda";
-            // 
-            // odalarToolStripMenuItem
-            // 
-            this.odalarToolStripMenuItem.Name = "odalarToolStripMenuItem";
-            this.odalarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.odalarToolStripMenuItem.Text = "Odalar";
-            this.odalarToolStripMenuItem.Click += new System.EventHandler(this.odalarToolStripMenuItem_Click);
             // 
             // Anasayfa
             // 
@@ -100,7 +82,5 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem misafirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem misafirGirişiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem odaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem odalarToolStripMenuItem;
     }
 }

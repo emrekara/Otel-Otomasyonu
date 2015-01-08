@@ -14,7 +14,6 @@ namespace Otel_Otomasyonu
     {
         MisafirKayit Mgiris;
         MisafirKontrol Mkontrol;
-        Odalar odalar;
         public Anasayfa()
         {
             InitializeComponent();
@@ -60,19 +59,6 @@ namespace Otel_Otomasyonu
             
         }
 
-        private void odalarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (odalar == null || odalar.IsDisposed)
-            {
-                odalar = new Odalar();
-                odalar.MdiParent = this;
-                odalar.Show();
-            }
-            else
-            {
-                odalar.Focus();
-            }
-            odalar.WindowState = FormWindowState.Maximized;
-        }
+       
     }
 }
